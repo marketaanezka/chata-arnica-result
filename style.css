@@ -1,0 +1,263 @@
+*,
+body,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(3, 36, 14);
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  line-height: 1.3;
+}
+
+span {
+  line-height: 1.5;
+}
+
+/*-------------- STYLOVÁNÍ TŘÍD ---------------*/
+
+.page-header {
+  background-color: #c0d7d3;
+  color: rgb(18, 46, 28);
+  padding: 1.5rem;
+  padding-bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Dawning of a New Day', cursive;
+  font-size: 1.5rem;
+}
+
+.navlink {
+  color: rgb(18, 46, 28);
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.pitch {
+  background-color: rgb(192, 215, 211);
+  color: rgb(18, 46, 28);
+  padding: 2.5rem 1.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+
+.subheading {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.subheading__content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.intro-image {
+  height: 70vh;
+  background-image: url('./images/arnica-intro.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.pricelist {
+  background-color: rgb(192, 215, 211);
+  color: rgb(18, 46, 28);
+  padding: 2.5rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricelist__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pricelist__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer {
+  margin: 1rem 0 2rem 0;
+  width: 80%;
+  max-width: 270px;
+}
+
+.offer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 0.5rem;
+}
+
+.offer__title {
+  font-size: 1.7rem;
+}
+
+.offer__price {
+  font-size: 1.5rem;
+}
+
+.offer__detail {
+  font-size: 1.2rem;
+  list-style: circle;
+  margin-left: 1.2rem;
+}
+
+.review {
+  padding: 3.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review__title {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.review__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review__text {
+  border: 2px solid #c0d7d3;
+  padding: 2rem;
+  color: rgb(18, 46, 28);
+  font-size: 1.3rem;
+  font-style: oblique;
+}
+
+.review__author {
+  text-align: end;
+  font-style: normal;
+}
+
+.footer {
+  background-color: rgb(192, 215, 211);
+  color: rgb(18, 46, 28);
+  padding: 2.5rem 1.5rem;
+  font-size: 1.2rem;
+
+  display: flex;
+  gap: 2rem;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__row span {
+  display: inline-block;
+  height: 1.2rem;
+}
+
+.contact__label {
+  width: 70px;
+}
+
+.social-media__row {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 100%;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 800px) {
+  .page-header {
+    padding: 2rem 4rem;
+    padding-bottom: 0;
+  }
+
+  .logo {
+    font-size: 2.25rem;
+  }
+
+  .navlink {
+    font-size: 1.5rem;
+  }
+
+  .pitch {
+    font-size: 3rem;
+  }
+
+  .subheading {
+    padding: 2.5rem 4rem;
+    font-size: 1.75rem;
+  }
+
+  .pricelist__content {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 3rem;
+  }
+
+  .offer {
+    width: 200px;
+  }
+
+  .review__text {
+    border: none;
+    background-color: rgb(192, 215, 211);
+    width: 250px;
+    padding: 1.5rem;
+    position: relative;
+    left: 60px;
+  }
+
+  .review__photo {
+    height: 400px;
+    width: 300px;
+    background-image: url('./images/reviewer.jpg');
+    background-size: cover;
+  }
+
+  .footer {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pricelist__content {
+    gap: 6rem;
+  }
+
+  .footer {
+    gap: 6rem;
+  }
+}
