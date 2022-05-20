@@ -69,7 +69,7 @@ span {
 
 .subheading__content {
   text-align: center;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -196,7 +196,7 @@ span {
   margin-right: 0.5rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 840px) {
   .page-header {
     padding: 2rem 4rem;
     padding-bottom: 0;
@@ -252,7 +252,7 @@ span {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .pricelist__content {
     gap: 6rem;
   }
