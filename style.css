@@ -1,3 +1,19 @@
+/* CSS VARIABLES */
+
+html {
+  --background-primary: #f3f3f3;
+  --background-secondary: #cdddda;
+  --text: #1f2403;
+}
+
+html[data-theme='dark'] {
+  --background-primary: #132221;
+  --background-secondary: #476462;
+  --text: #e1e1e1;
+}
+
+/* ZÁKLADNÍ STYLY */
+
 *,
 body,
 ::before,
@@ -12,8 +28,13 @@ html {
 }
 
 body {
-  color: rgb(3, 36, 14);
+  color: var(--text);
   font-family: 'Alegreya Sans', sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: baseline;
 }
 
 ul {
@@ -28,11 +49,10 @@ span {
   line-height: 1.5;
 }
 
-/*-------------- STYLOVÁNÍ TŘÍD ---------------*/
+/* HLAVIČKA - NAVIGACE */
 
 .page-header {
-  background-color: #c0d7d3;
-  color: rgb(18, 46, 28);
+  background-color: var(--background-secondary);
   padding: 1.5rem;
   padding-bottom: 0;
 
@@ -47,21 +67,25 @@ span {
 }
 
 .navlink {
-  color: rgb(18, 46, 28);
+  color: var(--text);
   text-decoration: none;
   margin-right: 0.5rem;
 }
 
+/* HLAVNÍ NADPIS */
+
 .pitch {
-  background-color: rgb(192, 215, 211);
-  color: rgb(18, 46, 28);
+  background-color: var(--background-secondary);
   padding: 2.5rem 1.5rem;
   font-size: 2.5rem;
   text-align: center;
   font-family: 'Lora', serif;
 }
 
+/* ÚVODNÍ TEXT  */
+
 .subheading {
+  background-color: var(--background-primary);
   padding: 2.5rem 1.5rem;
   text-align: center;
   font-size: 1.5rem;
@@ -73,6 +97,8 @@ span {
   margin: 0 auto;
 }
 
+/* OBRÁZEK CHATY */
+
 .intro-image {
   height: 70vh;
   background-image: url('./images/arnica-intro.jpg');
@@ -80,9 +106,10 @@ span {
   background-position: center;
 }
 
+/* CENOVÉ NABÍDKY */
+
 .pricelist {
-  background-color: rgb(192, 215, 211);
-  color: rgb(18, 46, 28);
+  background-color: var(--background-secondary);
   padding: 2.5rem 1.5rem;
 
   display: flex;
@@ -131,7 +158,10 @@ span {
   margin-left: 1.2rem;
 }
 
+/* RECENZE */
+
 .review {
+  background-color: var(--background-primary);
   padding: 3.5rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -151,9 +181,8 @@ span {
 }
 
 .review__text {
-  border: 2px solid #c0d7d3;
+  border: 2px solid var(--background-secondary);
   padding: 2rem;
-  color: rgb(18, 46, 28);
   font-size: 1.3rem;
   font-style: oblique;
 }
@@ -163,9 +192,10 @@ span {
   font-style: normal;
 }
 
+/* PATIČKA - KONTAKT */
+
 .footer {
-  background-color: rgb(192, 215, 211);
-  color: rgb(18, 46, 28);
+  background-color: var(--background-secondary);
   padding: 2.5rem 1.5rem;
   font-size: 1.2rem;
 
@@ -197,6 +227,7 @@ span {
 }
 
 @media (min-width: 840px) {
+  /* HLAVIČKA - NAVIGACE */
   .page-header {
     padding: 2rem 4rem;
     padding-bottom: 0;
@@ -210,14 +241,20 @@ span {
     font-size: 1.5rem;
   }
 
+  /* HLAVNÍ NADPIS */
+
   .pitch {
     font-size: 3rem;
   }
+
+  /* ÚVODNÍ TEXT */
 
   .subheading {
     padding: 2.5rem 4rem;
     font-size: 1.75rem;
   }
+
+  /* CENOVÉ NABÍDKY */
 
   .pricelist__content {
     flex-direction: row;
@@ -229,9 +266,11 @@ span {
     width: 220px;
   }
 
+  /* RECENZE */
+
   .review__text {
     border: none;
-    background-color: rgb(192, 215, 211);
+    background-color: var(--background-secondary);
     width: 250px;
     padding: 1.5rem;
     position: relative;
@@ -245,6 +284,8 @@ span {
     background-size: cover;
   }
 
+  /* PATIČKA - KONTAKT */
+
   .footer {
     flex-direction: row;
     gap: 3rem;
@@ -253,9 +294,13 @@ span {
 }
 
 @media (min-width: 1200px) {
+  /* RECENZE */
+
   .pricelist__content {
     gap: 6rem;
   }
+
+  /* PATIČKA - KONTAKT */
 
   .footer {
     gap: 6rem;

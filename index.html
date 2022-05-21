@@ -6,37 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chata Arnica</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="toggle-switch.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Libre+Bodoni&family=Lora:ital@1&family=Dawning+of+a+New+Day&display=swap"
       rel="stylesheet"
     />
+    <script src="index.js" type="module"></script>
   </head>
   <body>
+    <!-- HLAVIČKA - NAVIGACE  -->
     <header class="page-header">
       <div class="logo">Arnica</div>
       <nav>
         <a class="navlink" href="#pricelist">Ceník</a>
         <a class="navlink" href="#contact">Kontakt</a>
+        <div class="theme-switch-wrapper">
+          <span>Dark mode</span>
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+        </div>
       </nav>
     </header>
     <main>
+      <!-- HLAVNÍ NADPIS -->
       <section class="pitch">
-        <p>Utečte do krajiny svých snů</p>
+        <p>Utečte do krajiny svých snů v chatě Arnica</p>
       </section>
+      <!-- ÚVODNÍ TEXT -->
       <section class="subheading">
         <p class="subheading__content">
           Každodenní shon a stres mají neblahý vliv na naše zdraví i duševní
-          pohodu. Přijeďte si načerpat energii do <i>glamping.</i> chaty Arnica,
-          která stojí v samém srdci Řáholeckého lesa. Najdete zde jedinečný
-          klid, možnost restartu, dobití baterek, usebrání. Na probuzení do
-          zpěvu ptáků a šustění korun stromů jen tak nezapomenete!
+          pohodu. Přijeďte si načerpat energii ve stylu <i>glamping</i> chaty
+          Arnica, která stojí v samém srdci Řáholeckého lesa. Najdete zde
+          jedinečný klid, možnost restartu, dobití baterek, usebrání. Na
+          probuzení do zpěvu ptáků a šustění korun stromů jen tak nezapomenete!
         </p>
       </section>
+      <!-- OBRÁZEK CHATY -->
       <section>
         <div class="intro-image"></div>
       </section>
+      <!-- CENOVÉ NABÍDKY -->
       <section class="pricelist" id="pricelist">
         <h2 class="pricelist__title">Ceník</h2>
         <div class="pricelist__content">
@@ -75,6 +89,7 @@
           </div>
         </div>
       </section>
+      <!-- RECENZE -->
       <section class="review">
         <div class="review__content">
           <div class="review__text">
@@ -88,6 +103,7 @@
         </div>
       </section>
     </main>
+    <!-- PATIČKA - KONTAKT -->
     <footer id="contact" class="footer">
       <section class="contact">
         <div class="contact__row">
